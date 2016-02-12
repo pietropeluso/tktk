@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Omnes Medium';
+    src: url('/fonts/omnes-medium-webfont.ttf') format('ttf');
+    font-weight: $normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Regular.ttf') format('ttf');
+    font-weight: $normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Semibold.ttf') format('ttf');
+    font-weight: $bold;
+    font-style: normal;
+}
+
+$font: 'Omnes Medium', 'Open Sans', sans-serif;
+
+body {
+  font-size: $font-size-normal;
+  font-family: $font;
+}
+
+@media (max-width: $screen-md-min) {
+    body {
+      font-size: $font-size-small;
+    }
+}

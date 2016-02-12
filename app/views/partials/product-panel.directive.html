@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{:: ctrl.header}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel-body__image-section">
+      <img ng-src="{{:: ctrl.imageUrl}}" alt="">
+    </div>
+    <div>
+      <p ng-repeat="item in ctrl.info track by $index">{{:: item}}</p>
+      <p>{{:: ctrl.ulMessage}}</p>
+      <ul>
+        <li ng-repeat="element in ctrl.listItems track by $index">{{:: element}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

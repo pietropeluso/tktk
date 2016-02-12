@@ -37,7 +37,8 @@ gulp.task('vendor-scripts', function() {
   gulp.src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/angular/angular.js'
+      'node_modules/angular/angular.js',
+      'node_modules/angular-route/angular-route.js'
     ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('app/js'))
@@ -92,8 +93,8 @@ gulp.task('compass', function() {
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss', ['compass']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', ['scripts']);
+  gulp.watch('app/**/*.html', browserSync.reload);
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
 });
 
 

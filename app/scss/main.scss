@@ -1,0 +1,9 @@
+@import "_variables";
+@import "utilities/_typography";
+@import "components/_panel";
+
+.page-header {
+  h1 {
+    font-weight: $bold;
+  }
+}

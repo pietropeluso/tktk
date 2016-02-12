@@ -1,0 +1,35 @@
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
+// Panel variables
+$panel-font-color             : #4C4C4C;
+$panel-header-background-color: #FAFAFA;
+$panel-box-shadow-color       : $mediumGray;
+
+.panel {
+  color: $panel-font-color;
+
+  @include border-top-left-radius(0px);
+  @include border-top-right-radius(0px);
+  @include border-bottom-left-radius(5px);
+  @include border-bottom-right-radius(5px);
+
+  @include box-shadow($panel-box-shadow-color 0px 0px 3px);
+
+  &-default > &-heading {
+    background-color: $panel-header-background-color;
+  }
+
+  &-heading {
+      padding: 30px 20px;
+      font-weight: bold;
+  }
+
+  .panel-body {
+    @at-root #{&}__image-section {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+}
